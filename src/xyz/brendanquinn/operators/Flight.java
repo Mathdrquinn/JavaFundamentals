@@ -4,10 +4,7 @@ package xyz.brendanquinn.operators;
  * Created by brendanquin on 5/18/16.
  */
 public class Flight {
-    private int flightNumber;
-    private int seats = 150;
-    private int passengers;
-    private int openSeats;
+    private int flightNumber, seats = 150, passengers, openSeats;
 
     {
         this.calcOpenSeats();
@@ -28,6 +25,24 @@ public class Flight {
         openSeats = seats - passengers;
     }
 
+    public int getOpenSeats() {
+        this.calcOpenSeats();
+        return this.openSeats;
+    }
+
+    private boolean hasSeating(int newPassengers) {
+        return newPassengers <= this.openSeats && this.openSeats - newPassengers <= seats;
+    }
+
+    public void addPassengers(int change) {
+        if(this.hasSeating(change)) {
+            this.passengers += change;
+            this.calcOpenSeats();
+        } else {
+            System.out.println("Insufficient Seating");
+        }
+    }
+
     public void setFlightNumber(int flightNumber) {
         this.flightNumber = flightNumber;
     }
@@ -36,8 +51,4 @@ public class Flight {
         return this.flightNumber;
     }
 
-    public int getOpenSeats() {
-        this.calcOpenSeats();
-        return this.openSeats;
-    }
 }
