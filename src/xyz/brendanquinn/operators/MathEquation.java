@@ -6,8 +6,27 @@ package xyz.brendanquinn.operators;
 public class MathEquation {
     public double leftVal;
     public double rightVal;
-    public char opCode;
+    public char opCode = 'a';
     public double result;
+
+    public MathEquation(char opCode) {
+        this.opCode = opCode;
+    }
+
+    public MathEquation(char opCode, double leftVal, double rightVal) {
+        this(opCode);
+
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+    }
+
+    public void execute(double leftVal, double rightVal) {
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+
+        this.execute();
+    }
+
     
     public void execute() {
         switch(opCode) {

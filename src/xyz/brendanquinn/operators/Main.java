@@ -12,10 +12,10 @@ public class Main {
 //        double[] results = new double[opCodes.length];
 
         MathEquation[] equations = new MathEquation[4];
-        equations[0] = create(100.0d, 50.0d, 'd');
-        equations[1] = create(25.0d, 92.0d, 'a');
-        equations[2] = create(172.0d, 73.0d, 's');
-        equations[3] = create(11.0d, 3.0d, 'm');
+        equations[0] = new MathEquation('d', 100.0d, 50.0d);
+        equations[1] = new MathEquation('a', 25.0d, 92.0d);
+        equations[2] = new MathEquation('s', 172.0d, 73.0d);
+        equations[3] = new MathEquation('m', 11.0d, 3.0d);
 
         for(MathEquation equation : equations) {
             equation.execute();
@@ -23,15 +23,25 @@ public class Main {
             System.out.print(equation.result);
             System.out.println();
         }
-    }
 
-    public static MathEquation create(double leftVal, double rightVal, char optCode) {
-        MathEquation equation = new MathEquation();
-        equation.leftVal = leftVal;
-        equation.rightVal = rightVal;
-        equation.opCode = optCode;
+        System.out.println();
+        System.out.println("Using Overloads");
+        System.out.println();
 
-        return equation;
+        double leftDouble = 9.0d;
+        double rightdouble = 4.0d;
+        int leftIn = 9;
+        int rightInt = 4;
+
+        MathEquation equationOverload = new MathEquation('d');
+
+        equationOverload.execute(leftDouble, rightdouble);
+        System.out.print("Result: ");
+        System.out.println(equationOverload.result);
+
+        equationOverload.execute(4, rightdouble);
+        System.out.print("Result: ");
+        System.out.println(equationOverload.result);
     }
 
 }
