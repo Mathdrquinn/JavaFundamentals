@@ -9,7 +9,7 @@ public class Flight {
     private int passengers;
     private int openSeats;
 
-    public Flight() {
+    {
         this.calcOpenSeats();
     }
 
