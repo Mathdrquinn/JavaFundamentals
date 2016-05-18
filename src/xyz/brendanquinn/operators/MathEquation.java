@@ -27,6 +27,14 @@ public class MathEquation {
         this.execute();
     }
 
+    public void execute(int leftVal, int rightVal) {
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+
+        this.execute();
+        result = (int)result;
+    }
+
     
     public void execute() {
         switch(opCode) {

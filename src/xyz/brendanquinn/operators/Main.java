@@ -30,7 +30,7 @@ public class Main {
 
         double leftDouble = 9.0d;
         double rightdouble = 4.0d;
-        int leftIn = 9;
+        int leftInt = 9;
         int rightInt = 4;
 
         MathEquation equationOverload = new MathEquation('d');
@@ -39,7 +39,7 @@ public class Main {
         System.out.print("Result: ");
         System.out.println(equationOverload.result);
 
-        equationOverload.execute(4, rightdouble);
+        equationOverload.execute(leftInt, rightInt);
         System.out.print("Result: ");
         System.out.println(equationOverload.result);
     }
