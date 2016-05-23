@@ -13,9 +13,9 @@ public class Main {
 
         System.out.println(cf.getSeats());
         System.out.println(cf.getUsedCargoSpace());
-        cf.add1Package(3, 7, 9);
+        cf.add1Package(3.8f, 7f, 9.8f);
         System.out.println(cf.getUsedCargoSpace());
-        cf.add1Package(20, 40, 60);
+        cf.add1Package(20.0f, 40.0f, 60.0f);
 
     }
 

@@ -11,7 +11,7 @@ public class CargoFlight extends Flight {
     public CargoFlight() {}
 
     int getSeats() { return seats; }
-    public double getUsedCargoSpace() { return usedCargoSpace; }
+    public float getUsedCargoSpace() { return usedCargoSpace; }
 
     public void add1Package(float h, float w, float d) {
         float size = h * w * d;
