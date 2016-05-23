@@ -9,23 +9,13 @@ public class Main {
         Flight plane1 = new Flight(123, 49);
         Flight plane2 = new Flight(29, 112);
 
-        System.out.println("Before:");
-        System.out.println(plane1.getFlightNumber());
-        System.out.println(plane1.getOpenSeats());
-        System.out.println(plane2.getFlightNumber());
-        System.out.println(plane2.getOpenSeats());
+        CargoFlight cf = new CargoFlight();
 
-        swapFlightNumbers(plane1, plane2);
-
-        System.out.println("After:");
-        System.out.println(plane1.getFlightNumber());
-        System.out.println(plane1.getOpenSeats());
-        System.out.println(plane2.getFlightNumber());
-        System.out.println(plane2.getOpenSeats());
-
-        System.out.println("Expect Plan1 to have 149 open seats");
-        plane1.addPassengers(-48);
-        System.out.println(plane1.getOpenSeats());
+        System.out.println(cf.getSeats());
+        System.out.println(cf.getUsedCargoSpace());
+        cf.add1Package(3, 7, 9);
+        System.out.println(cf.getUsedCargoSpace());
+        cf.add1Package(20, 40, 60);
 
     }
 

@@ -10,6 +10,8 @@ public class Flight {
         this.calcOpenSeats();
     }
 
+    public Flight() {}
+
     public Flight(int flightNumber) {
         this.flightNumber = flightNumber;
         this.calcOpenSeats();
