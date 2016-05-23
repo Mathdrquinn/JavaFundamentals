@@ -4,10 +4,21 @@ package xyz.brendanquinn.operators;
  * Created by brendanquin on 4/29/16.
  */
 public class MathEquation {
-    public double leftVal;
-    public double rightVal;
-    public char opCode = 'a';
+    private double leftVal;
+    private double rightVal;
+    private char opCode = 'a';
     public double result;
+
+    public double getLeftVal() { return leftVal; }
+    public void setLeftVal(double leftVal) { this.leftVal = leftVal; }
+    public double getRightVal() { return rightVal; }
+    public void setRightVal(double rightVal) { this.rightVal = rightVal; }
+    public char getOpCode() { return opCode; }
+    public void setOpCode(char opCode) { this.opCode = opCode;}
+
+    public double getResult() { return result; }
+
+    public MathEquation() {}
 
     public MathEquation(char opCode) {
         this.opCode = opCode;
