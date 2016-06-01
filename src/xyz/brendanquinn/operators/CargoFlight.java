@@ -8,7 +8,9 @@ public class CargoFlight extends Flight {
     private float maxCargoSpace = 10000,
         usedCargoSpace;
 
-    public CargoFlight() {}
+    public CargoFlight() {
+        super("Cargo");
+    }
 
     int getSeats() { return seats; }
     public float getUsedCargoSpace() { return usedCargoSpace; }
